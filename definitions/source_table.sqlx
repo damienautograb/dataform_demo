@@ -1,0 +1,24 @@
+config {
+    type: "table"
+    ,name: "source"
+    ,description: "Description of the table"
+    ,tags:  ["favourite","least_liked"]
+}
+
+SELECT
+    "apples" as fruit
+    ,3 as count
+Union All
+SELECT
+    "oranges" as fruit
+    ,5 as count
+
+Union All
+SELECT
+    "pears" as fruit
+    ,1 as count
+
+Union All
+SELECT 
+    "bananas" as favourite
+    ,0 as count
