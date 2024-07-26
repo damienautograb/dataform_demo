@@ -1,9 +1,13 @@
 config {
-    type: "table"
+    type: "view"
     ,name: "source"
-    ,description: "Description of the table"
-    ,tags:  ["favourite","least_liked"]
-}
+    ,assertion: { 
+        uniqueKey: ["fruit"]
+        ,rowConditions: [
+            'count >0',
+        ]
+    }
+} 
 
 SELECT
     "apples" as fruit
